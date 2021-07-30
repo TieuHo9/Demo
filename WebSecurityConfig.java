@@ -14,8 +14,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public UserDetailsService userDetailsService() {
         // Tạo ra user trong bộ nhớ
-        // lưu ý, chỉ sử dụng cách này để minh họa
-        // Còn thực tế chúng ta sẽ kiểm tra user trong csdl
+       
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
         manager.createUser(
                 User.withDefaultPasswordEncoder() // Sử dụng mã hóa password đơn giản
